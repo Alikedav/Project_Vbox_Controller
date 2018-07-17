@@ -18,5 +18,7 @@ def poweroff_vm(vm_id):
     print ("Powering off VM: %s..." % vm_id)
     output = subprocess.Popen(['VBoxManage', 'controlvm', vm_id, 'poweroff'])
 
+vm_id = str(input("Enter machine ID: ")) 
+
 results = poweroff_vm(vm_id)
 print(results)
